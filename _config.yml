@@ -1,0 +1,6 @@
+include:
+  - .nojekyll
+
+plugins: []
+theme: 
+future: true
