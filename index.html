@@ -62,6 +62,31 @@
     <style>
         /* Cache-bust hero background to force updated image */
         .hero { background-image: url("img/eng_pics/engagementriver.png?v=20260206") !important; }
+
+        /* Invitation section bigger/bolder */
+        #invitation h3 {
+            font-size: 3em;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        #invitation p {
+            font-size: 1.2em;
+        }
+
+        /* Logo transparency fix */
+        .hero-content img {
+            mix-blend-mode: multiply;
+            background: transparent;
+        }
+
+        /* Seating chart */
+        #seating .floor-plan-img {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body id="top">
@@ -80,7 +105,7 @@
                             <li><a href="#intro">How we met</a></li>
                             <li><a href="#events">Events</a></li>
                             <li><a href="#eng-pics">Engagement</a></li>
-                            <li><a href="#hawaii-pics">Hawaii</a></li>
+                            <li><a href="#seating">Seating</a></li>
                             <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li>
                         </ul>
                         <ul class="member-actions">
@@ -122,7 +147,7 @@
             <div class="col-md-12 text-center">
                 <h3>We are getting married!</h3>
                 <p>Join us Friday, April 17<sup>th</sup>, 2026 for our wedding celebration!</p>
-                <p>Note: Festivities will begin Thursday, April 16<sup>th</sup>, 2026 and end Saturday, April 18<sup>th</sup>, 2026! Come for some, come for all!</p>
+                <p>Festivities begin Thursday, April 16<sup>th</sup> and wrap up Saturday, April 18<sup>th</sup> — come for some, come for all!</p>
             </div>
         </div>
     </div>
@@ -139,8 +164,10 @@
             <div class="col-md-3 hidden-sm hidden-xs"><img src="img/gbhawaii.jpeg" class="wp1"></div>
             <div class="col-md-6">
                 <p>
-                    I first met Brandon on a visit to St. Louis from Houston! I had just moved from Kansas City and was looking to have a good time... a one night stand even!
-                    Who better than to do it with Brandon! But then, true love set in, and what was supposed to be one night turned into forever! :)
+                    Gabriella was born and raised in Houston, Texas, and Brandon is a St. Louis native — two cities, two roots, one love story.
+                    We met when Gabby visited St. Louis, and from the very first night it was clear this was something special. True love has a funny way of showing up when you least expect it, and what started as one unforgettable visit turned into forever.
+                    <br><br>
+                    I am so incredibly fortunate that Brandon had the courage and independence to pick up his life and move to Texas on his own. Watching him build a new career, plant new roots, and continuously grow into the best version of himself has been one of the greatest honors of my life. He didn't just move to a new state — he chose us, and I will never stop being grateful for that. 🤍
                 </p>
             </div>
             <div class="col-md-3 hidden-sm hidden-xs"><img src="img/nasabb.jpeg" class="wp2"></div>
@@ -160,40 +187,28 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+            <div class="col-md-4 col-sm-12 col-xs-12">
                 <div class="wp3">
                     <p><strong>Thursday, April 16th</strong></p>
-
-                    <h5>Family Dinner <span class="time">5PM - 8PM</span></h5>
-                    <p>Our families have been so loving and supportive of each other since the very beginning of our relationship
-                        We will be celebrating over some food at Vaquero's Mexican Restaurant. 
-                    </p>
-                </div>
-                <div class="wp5">
-                    <h5>Pre-Party before the BIG party! <span class="time">8ishPM - 12ishAM</span></h5>
-                    <p>The bride & groom would like to have some "shots before the
-                        knot". We want to celebrate with EVERYONE over some clubbing, drinks, and dancing! Let's laugh, bask in the happiness,
-                        and party because it's GABBY AND BRANDON EVE!!! Lastly, expect some beer
-                        pong matches & karaoke for sure.</p>
+                    <h5>Immediate Family &amp; Wedding Party Dinner <span class="time">7PM – 11PM</span></h5>
+                    <p>Our families and wedding party have been the backbone of this whole journey. We're kicking off the weekend with a dinner to celebrate the people who mean the most to us.</p>
+                    <p><i class="fa fa-map-marker"></i> <a href="https://maps.google.com/?q=Moontower+Saloon+10212+Menchaca+Rd+Austin+TX+78748" target="_blank">Moontower Saloon</a><br>10212 Menchaca Rd, Austin, TX 78748</p>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
-                <div class="wp4">
-                    <p><strong>Friday, April 17th</strong></p>
-
-                    <h5>It's a nice day for a Brown Wedding <span class="time">5PM-11PM</span></h5>
-                    <p>It's the moment we've been waiting for! Gabby & Brandon are getting married! GABBY AND BRANDON DAY!!!
-                        We will be having a super fun, short, and sweet ceremony followed by the reception with our close family and friends. We can't wait to see you there to witness our vows and celebrate our love!
-                        Location for both Ceremony and Reception: Ranch Austin; 10313 Circle Dr, Austin, TX 78736
-                    </p>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="wp4" style="border: 2px solid #c9a96e; border-radius: 6px; padding: 20px; background: rgba(201,169,110,0.05);">
+                    <p><strong>🎉 Friday, April 17th — THE BIG DAY 🎉</strong></p>
+                    <h5>It's a Nice Day for a Brown Wedding <span class="time">5PM – 11PM</span></h5>
+                    <p>The moment we've all been waiting for! Gabby &amp; Brandon are getting married! We'll have a super fun, short, and sweet ceremony followed by the reception with our closest family and friends. We cannot wait to see you there to witness our vows and celebrate our love!</p>
+                    <p><i class="fa fa-map-marker"></i> <a href="https://maps.google.com/?q=Ranch+Austin+10313+Circle+Dr+Austin+TX+78736" target="_blank">Ranch Austin</a><br>10313 Circle Dr, Austin, TX 78736<br><em>Ceremony &amp; Reception — same location</em></p>
                 </div>
-                <div class="wp6">
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="wp5">
                     <p><strong>Saturday, April 18th</strong></p>
-
-                    <h5>Post-Nuptuals Brunch <span class="time">10AM-2PM</span></h5>
-                    <p>Let's have a relaxed brunch after the wedding to celebrate our union and enjoy some delicious 
-                        food with all our loved ones who are able to join!
-                    </p>
+                    <h5>Post-Nuptials Brunch <span class="time">Noon</span></h5>
+                    <p>Let's keep the celebration going! Join us for a relaxed post-wedding hangout over food and drinks with all the loved ones who can make it.</p>
+                    <p><i class="fa fa-map-marker"></i> <a href="https://maps.google.com/?q=Bangers+Sausage+House+Beer+Garden+79+Rainey+St+Austin+TX+78701" target="_blank">Banger's Sausage House &amp; Beer Garden</a><br>79 Rainey St, Austin, TX 78701</p>
                 </div>
             </div>
         </div>
@@ -217,34 +232,29 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
                     <h3 class="text-center section-padding">Ugh... dress codes?</h3>
-                    <h5>Austin in April Expected Weather:</h5>
-                    <p><ul><li>High: 80°F (27°C)</li>
-                            <li>Low: 60°F (16°C)</li>
+                    <h5>Austin on April 17th — Current Forecast:</h5>
+                    <p><ul>
+                            <li>High: ~85°F (29°C)</li>
+                            <li>Low: ~65°F (18°C)</li>
+                            <li>Mostly sunny with a light breeze</li>
                         </ul>
-                        While April is not typically the wettest month, there is a chance of showers. We recommend layers and bringing a light raincoat/umbrella just in case.
+                        It's looking like a beautiful spring evening! We will be <strong>outdoors on the ranch</strong>, so dress accordingly — light layers are always a good call for when the sun goes down.
                     </p>
-                    <h5>Family Dinner <span class="time">Thursday: 5PM - 8PM</span></h5>
+                    <h5>Family &amp; Wedding Party Dinner <span class="time">Thursday: 7PM – 11PM</span></h5>
                     <p>
-                        <strong>Laid-Back, comfortable, picture worthy</strong>
+                        <strong>Laid-back and comfortable</strong>
                     </p>
-                    <h5>Pre-Party Evening <span class="time">Thursday: 8ishPM - 12AM</span></h5>
-                    <p>
-                        <strong>Western attire</strong>
-                        <br>
-                        A chance to explore downtown Austin so embrace your inner Texan! We all have one! ONE OF US! ONE OF US! ONE OF US! 
-                        Whether you want to go all out with a cowboy hat, boots, and belt buckle or just add a western flair to your outfit, we want you to feel comfortable and have fun with it! Here are some  
-                        <a href="https://www.pinterest.com/gabbzwillis/austin-pre-wedding-party/">ideas</a>!
-                    </p>
-                    <h5>BROWN TOWN WEDDING <span class="time">FRIDAY: 5PM-11PM</span></h5>
+                    <h5>BROWN TOWN WEDDING <span class="time">Friday: 5PM – 11PM</span></h5>
                     <p>
                         <strong>Bridal Party</strong>
                         <br>
-                        Dark Green, Forest Green, Emeralds! Some shots of sage, peach, and cream! Vibe: Elegant, classy, and timeless.
-                        <br>
+                        Dark Green, Forest Green, Emeralds! Some shots of sage, peach, and cream. Vibe: Elegant, classy, and timeless.
+                        <br><br>
                         <strong>Guests</strong>
                         <br>
-                        If you're not part of the bridal party and really want to wear green, there's no stopping you! However, white is... it's on the strange side. Of course we want you to feel so beautiful but let's read the... ranch.
-                        <br>Small Note: We will primarily be outside on an actual ranch unless the weather is bad which we'd then move indoors.
+                        If you're not in the bridal party and really want to wear green, there's no stopping you! However, white is... it's on the strange side. Of course we want you to feel beautiful — let's just read the ranch. 😄
+                        <br><br>
+                        <strong>Note:</strong> The ceremony and reception are <strong>outdoors</strong> on an actual ranch. Comfortable footwear is highly recommended — think block heels, wedges, or flats over stilettos!
                     </p>
                 </div>
             </div><!-- /.modal-content -->
@@ -390,54 +400,23 @@
     </div>
 </section>
 
-<section id="hawaii-pics" class="section-padding">
-    <div class="container-fluid">
+<section id="seating" class="section-padding">
+    <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3 class="header">Our Hawaii Trip</h3>
-                <p>Some of our favorite memories from the islands</p>
+                <h3 class="header">Seating Layout</h3>
+                <p>Here's a rough guide to where everyone will be — feel free to move around and mingle!</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <a class="fancybox" rel="hawaii" href="img/eng_pics/hawaiilove.jpeg">
-                    <div class="img-wrap">
-                        <div class="overlay"><i class="fa fa-search"></i></div>
-                        <img src="img/eng_pics/hawaiilove.jpeg" alt="Hawaii"/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <a class="fancybox" rel="hawaii" href="img/eng_pics/hawaiimorelove.jpeg">
-                    <div class="img-wrap">
-                        <div class="overlay"><i class="fa fa-search"></i></div>
-                        <img src="img/eng_pics/hawaiimorelove.jpeg" alt="Hawaii"/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <a class="fancybox" rel="hawaii" href="img/eng_pics/hawaiimostlove.jpeg">
-                    <div class="img-wrap">
-                        <div class="overlay"><i class="fa fa-search"></i></div>
-                        <img src="img/eng_pics/hawaiimostlove.jpeg" alt="Hawaii"/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <a class="fancybox" rel="hawaii" href="img/gbhawaii.jpeg">
-                    <div class="img-wrap">
-                        <div class="overlay"><i class="fa fa-search"></i></div>
-                        <img src="img/gbhawaii.jpeg" alt="Hawaii"/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6">
-                <a class="fancybox" rel="hawaii" href="img/hawaiibb.jpeg">
-                    <div class="img-wrap">
-                        <div class="overlay"><i class="fa fa-search"></i></div>
-                        <img src="img/hawaiibb.jpeg" alt="Hawaii"/>
-                    </div>
-                </a>
+            <div class="col-md-10 col-md-offset-1 text-center">
+                <img src="img/seating-layout.png" alt="Ranch Austin Indoor Seating Layout" style="max-width:100%; border:1px solid #ddd; border-radius:4px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"
+                     onerror="this.style.display='none'; document.getElementById('seating-placeholder').style.display='block';">
+                <div id="seating-placeholder" style="display:none; padding: 40px; background: #f9f9f9; border: 2px dashed #ddd; border-radius: 6px;">
+                    <i class="fa fa-map" style="font-size: 48px; color: #ccc;"></i>
+                    <p style="margin-top: 15px; color: #aaa;">Seating chart coming soon!</p>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.9em; color: #888;">Ranch Austin Building Layout — April 17, 2026 &nbsp;|&nbsp; <em>Seats are approximate — come find us!</em></p>
             </div>
         </div>
     </div>
