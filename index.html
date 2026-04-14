@@ -180,13 +180,38 @@
             font-family: 'Cormorant Garamond', Georgia, serif !important;
         }
 
-        /* Seating chart */
-        #seating .floor-plan-img {
-            max-width: 100%;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        /* Tighten section padding globally */
+        .section-padding { padding: 28px 0 !important; }
+        #seating.section-padding { padding: 20px 0 10px !important; }
+        .rsvp.section-padding, #gift { padding: 20px 0 !important; }
+        footer { padding: 16px 0 !important; }
+        footer p { font-size: 1.1em !important; margin: 0; }
+
+        /* Seating caption */
+        #seating .seating-caption {
+            font-size: 1.1em;
+            color: #3a2e22;
+            margin-top: 12px;
         }
+
+        /* Gift closing line */
+        #gift .gift-closing {
+            font-size: 1.15em;
+            font-style: italic;
+            margin-top: 16px;
+            margin-bottom: 0;
+        }
+
+        /* Friday events panel — bigger */
+        .events-friday {
+            border: 2px solid #c9a96e;
+            border-radius: 6px;
+            padding: 24px;
+            background: rgba(201,169,110,0.06);
+        }
+        .events-friday p { font-size: 1.15em !important; }
+        .events-friday h5 { font-size: 1.45em !important; font-weight: 700; }
+        .events-friday .event-day-label { font-size: 1.2em !important; font-weight: 800; letter-spacing: 1px; }
 
         /* How We Met — bigger images and text */
         #intro p { font-size: 1.15em; color: #1e1810; line-height: 1.85; }
@@ -206,7 +231,7 @@
         #gift p { font-size: 1.1em; color: #1e1810; }
         #gift .gift-person-label p { margin-bottom: 2px; }
 
-        /* ── Navigation header ── */
+        /* ── Navigation header — full override of theme ── */
         section.navigation header {
             padding: 0 !important;
             background: rgba(15, 10, 5, 0.62) !important;
@@ -222,7 +247,6 @@
             border-bottom: 1px solid rgba(201,169,110,0.3) !important;
             box-shadow: 0 2px 16px rgba(0,0,0,0.08);
         }
-        /* Full-width header layout */
         .logo { display: none !important; }
         .header-content {
             width: 100% !important;
@@ -231,83 +255,75 @@
             display: flex !important;
             align-items: center !important;
             justify-content: space-between !important;
-            box-sizing: border-box;
+            box-sizing: border-box !important;
         }
-        .header-nav {
-            flex: 1 !important;
-            width: 100% !important;
-        }
+        .header-nav { flex: 1 !important; width: 100% !important; }
         .header-nav nav {
             display: flex !important;
             justify-content: space-between !important;
             align-items: center !important;
             width: 100% !important;
         }
-        .primary-nav {
+        /* Kill the theme's left margin on primary-nav */
+        header ul.primary-nav {
+            margin: 0 !important;
+            padding: 0 !important;
             display: flex !important;
             flex-wrap: nowrap !important;
             list-style: none !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            gap: 0 !important;
-            flex: 1;
-            justify-content: space-evenly;
+            flex: 1 !important;
+            justify-content: space-evenly !important;
         }
-        .primary-nav li { display: inline-block !important; }
-        .member-actions {
+        header ul.primary-nav li { display: inline-block !important; }
+        header ul.primary-nav li a {
+            font-family: 'Cormorant Garamond', Georgia, serif !important;
+            font-size: 13px !important;
+            letter-spacing: 1.5px !important;
+            text-transform: uppercase !important;
+            color: rgba(255,255,255,0.93) !important;
+            padding: 6px 4px !important;
+            padding-right: 4px !important;
+            transition: color 0.2s;
+            white-space: nowrap;
+            display: block;
+        }
+        header ul.primary-nav li a:hover { color: #c9a96e !important; }
+        section.navigation.fixed header ul.primary-nav li a { color: #2a1e10 !important; }
+        section.navigation.fixed header ul.primary-nav li a:hover { color: #c9a96e !important; }
+        header ul.member-actions {
             display: flex !important;
             align-items: center !important;
             gap: 16px !important;
             margin: 0 !important;
             padding: 0 !important;
             list-style: none !important;
-            white-space: nowrap !important;
-            flex-shrink: 0;
+            flex-shrink: 0 !important;
         }
-        .member-actions li { display: inline-block !important; }
-        /* Nav links */
-        .primary-nav li a {
+        header ul.member-actions li { display: inline-block !important; }
+        header ul.member-actions .login {
             font-family: 'Cormorant Garamond', Georgia, serif !important;
             font-size: 13px !important;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.93) !important;
-            padding: 6px 4px;
-            transition: color 0.2s;
-            white-space: nowrap;
-            display: block;
-        }
-        .primary-nav li a:hover { color: #c9a96e !important; }
-        section.navigation.fixed .primary-nav li a { color: #2a1e10 !important; }
-        section.navigation.fixed .primary-nav li a:hover { color: #c9a96e !important; }
-        /* Venue link */
-        .member-actions .login {
-            font-family: 'Cormorant Garamond', Georgia, serif !important;
-            font-size: 13px !important;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
+            letter-spacing: 1.5px !important;
+            text-transform: uppercase !important;
             color: rgba(255,255,255,0.93) !important;
             white-space: nowrap;
         }
-        section.navigation.fixed .member-actions .login { color: #2a1e10 !important; }
-        /* Gift G&B button */
+        section.navigation.fixed header ul.member-actions .login { color: #2a1e10 !important; }
         .member-actions .btn-gift {
             font-family: 'Cormorant Garamond', Georgia, serif !important;
             font-size: 13px !important;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            background: transparent;
-            border: 1.5px solid #c9a96e;
+            letter-spacing: 1.5px !important;
+            text-transform: uppercase !important;
+            background: transparent !important;
+            border: 1.5px solid #c9a96e !important;
             color: #c9a96e !important;
-            border-radius: 30px;
-            padding: 6px 16px;
+            border-radius: 30px !important;
+            padding: 6px 16px !important;
             transition: background 0.2s, color 0.2s;
             white-space: nowrap;
             display: inline-block;
         }
-        .member-actions .btn-gift:hover { background: #c9a96e; color: #fff !important; }
-        section.navigation.fixed .member-actions .btn-gift { border-color: #c9a96e; color: #c9a96e !important; }
-        section.navigation.fixed .member-actions .btn-gift:hover { background: #c9a96e; color: #fff !important; }
+        .member-actions .btn-gift:hover { background: #c9a96e !important; color: #fff !important; }
         .hero-gift-row { display: none; }
     </style>
 </head>
@@ -538,8 +554,8 @@
                 </div>
             </div>
             <div class="col-md-4 col-sm-12 col-xs-12">
-                <div class="wp4" style="border: 2px solid #c9a96e; border-radius: 6px; padding: 20px; background: rgba(201,169,110,0.05);">
-                    <p><strong>Friday, April 17th — THE BIG DAY</strong></p>
+                <div class="events-friday">
+                    <p class="event-day-label"><strong>Friday, April 17th — THE BIG DAY</strong></p>
                     <h5>It's a Nice Day for a Brown Wedding <span class="time">5PM – 11PM</span></h5>
                     <p>The moment we've all been waiting for! Gabby &amp; Brandon are getting married! We'll have a super fun, short, and sweet ceremony followed by the reception with our closest family and friends. We cannot wait to see you there to witness our vows and celebrate our love!</p>
                     <p><i class="fa fa-map-marker"></i> <a href="https://maps.google.com/?q=Ranch+Austin+10313+Circle+Dr+Austin+TX+78736" target="_blank">Ranch Austin</a><br>10313 Circle Dr, Austin, TX 78736<br><em>Ceremony &amp; Reception — same location</em></p>
@@ -766,7 +782,7 @@
                     <i class="fa fa-map" style="font-size: 48px; color: #ccc;"></i>
                     <p style="margin-top: 15px; color: #aaa;">Seating chart coming soon!</p>
                 </div>
-                <p style="margin-top: 15px; font-size: 0.9em; color: #888;">Ranch Austin Building Layout — April 17, 2026 &nbsp;|&nbsp; <em>Seats are approximate — come find us!</em></p>
+                <p class="seating-caption" style="margin-top: 12px;">Ranch Austin Building Layout — April 17, 2026 &nbsp;|&nbsp; <em>Seats are approximate — come find us!</em></p>
             </div>
         </div>
     </div>
@@ -837,7 +853,7 @@
                     </div>
                 </div>
 
-                <p style="margin-top: 28px; font-style: italic;">Your presence is truly the greatest gift. Thank you for celebrating with us!</p>
+                <p class="gift-closing">Your presence is truly the greatest gift. Thank you for celebrating with us!</p>
             </div>
         </div>
     </div>
