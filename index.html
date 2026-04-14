@@ -59,9 +59,17 @@
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&display=swap" rel="stylesheet">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <style>
+        /* ── Global font ── */
+        body, p, li, td, input, button, select, textarea, .btn,
+        h1, h2, h3, h4, h5, h6, a, span, div {
+            font-family: 'Cormorant Garamond', Georgia, serif !important;
+        }
+        p, li { font-size: 1.08em; line-height: 1.8; }
+        h3.header, h3 { letter-spacing: 1px; }
+        .time { font-style: italic; font-weight: 400; }
         /* Cache-bust hero background to force updated image */
         .hero { background-image: url("img/eng_pics/engagementriver.png?v=20260206") !important; }
 
@@ -174,9 +182,18 @@
         /* ── Navigation header ── */
         section.navigation header {
             padding: 28px 0 !important;
+            background: rgba(20, 15, 10, 0.55) !important;
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border-bottom: 1px solid rgba(201,169,110,0.25) !important;
         }
         section.navigation.fixed header {
             padding: 18px 0 !important;
+            background: rgba(255,252,248,0.97) !important;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(201,169,110,0.3) !important;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
         }
         /* Nav logo */
         .logo a img {
@@ -372,7 +389,7 @@
                 </div>
                 <div class="schedule-item">
                     <div class="schedule-time">11:00 PM</div>
-                    <div class="schedule-desc"><strong>Wrap Up &amp; Break Down</strong><br>All hands on deck! We'll need help collecting linens, clearing tables, and taking care of any close-up tasks for the Ranch. Many hands make light work — thank you in advance!</div>
+                    <div class="schedule-desc"><strong>Wrap Up &amp; Break Down</strong><br>All hands on deck! We'll need help collecting linens, clearing tables, and taking care of any close-up tasks for Ranch Austin. We completely understand everyone has travel schedules to get back home — please do what you can and we are so grateful for every hand!</div>
                 </div>
             </div>
             <div class="col-md-6 schedule-col">
@@ -705,7 +722,10 @@
                 <h3>No registry, just love (and a house fund!)</h3>
                 <p>We've been lucky enough to travel and have most of what we need. We're saving up for our first home together, so if you'd like to give a gift, a contribution via Venmo or Zelle means the world to us!</p>
                 <!-- Gabby -->
-                <h4 style="margin-top: 30px;">Gabriella</h4>
+                <div style="margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(201,169,110,0.3);">
+                    <h3 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:2.2em; font-weight:600; letter-spacing:3px; color:#3a2e22; margin-bottom:4px;">Gabriella</h3>
+                    <p style="font-style:italic; color:#9a7a50; margin-top:0; font-size:1em; letter-spacing:1px;">Venmo &amp; Zelle</p>
+                </div>
                 <div class="row" style="margin-top: 10px;">
                     <div class="col-md-6" style="padding: 10px;">
                         <a class="btn btn-fill btn-large" href="https://venmo.com/u/gabbzwillis" target="_blank">
@@ -728,7 +748,10 @@
                 </div>
 
                 <!-- Brandon -->
-                <h4 style="margin-top: 30px;">Brandon</h4>
+                <div style="margin-top: 44px; padding-top: 28px; border-top: 2px solid rgba(201,169,110,0.5);">
+                    <h3 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:2.2em; font-weight:600; letter-spacing:3px; color:#3a2e22; margin-bottom:4px;">Brandon</h3>
+                    <p style="font-style:italic; color:#9a7a50; margin-top:0; font-size:1em; letter-spacing:1px;">Venmo &amp; Zelle</p>
+                </div>
                 <div class="row" style="margin-top: 10px;">
                     <div class="col-md-6" style="padding: 10px;">
                         <a class="btn btn-fill btn-large" href="https://venmo.com/u/Brandon-Brown-220" target="_blank">
