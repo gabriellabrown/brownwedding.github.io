@@ -215,7 +215,7 @@
 
         /* How We Met — bigger images and text */
         #intro p { font-size: 1.15em; color: #1e1810; line-height: 1.85; }
-        #intro .wp1, #intro .wp2 { width: 100%; max-width: 220px; }
+        #intro .wp1, #intro .wp2 { width: 100%; max-width: 100%; height: auto; }
 
         /* Events — bigger text */
         #events p { font-size: 1.1em; color: #1e1810; }
@@ -231,7 +231,7 @@
         #gift p { font-size: 1.1em; color: #1e1810; }
         #gift .gift-person-label p { margin-bottom: 2px; }
 
-        /* ── Navigation header — full override of theme ── */
+        /* ── Navigation header — styling only (layout fixed in styles.min.css) ── */
         section.navigation header {
             padding: 0 !important;
             background: rgba(15, 10, 5, 0.62) !important;
@@ -248,65 +248,27 @@
             box-shadow: 0 2px 16px rgba(0,0,0,0.08);
         }
         .logo { display: none !important; }
-        .header-content {
-            width: 100% !important;
-            max-width: 100% !important;
-            padding: 14px 40px !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: space-between !important;
-            box-sizing: border-box !important;
-        }
-        .header-nav { flex: 1 !important; width: 100% !important; }
-        .header-nav nav {
-            display: flex !important;
-            justify-content: space-between !important;
-            align-items: center !important;
-            width: 100% !important;
-        }
         /* Kill the theme's left margin on primary-nav */
         header ul.primary-nav {
             margin: 0 !important;
             padding: 0 !important;
-            display: flex !important;
-            flex-wrap: nowrap !important;
-            list-style: none !important;
-            flex: 1 !important;
-            justify-content: space-evenly !important;
         }
-        header ul.primary-nav li { display: inline-block !important; }
         header ul.primary-nav li a {
             font-family: 'Cormorant Garamond', Georgia, serif !important;
             font-size: 13px !important;
             letter-spacing: 1.5px !important;
             text-transform: uppercase !important;
             color: rgba(255,255,255,0.93) !important;
-            padding: 6px 4px !important;
-            padding-right: 4px !important;
-            transition: color 0.2s;
-            white-space: nowrap;
-            display: block;
+            padding-right: 18px !important;
         }
         header ul.primary-nav li a:hover { color: #c9a96e !important; }
         section.navigation.fixed header ul.primary-nav li a { color: #2a1e10 !important; }
         section.navigation.fixed header ul.primary-nav li a:hover { color: #c9a96e !important; }
-        header ul.member-actions {
-            display: flex !important;
-            align-items: center !important;
-            gap: 16px !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            list-style: none !important;
-            flex-shrink: 0 !important;
-        }
-        header ul.member-actions li { display: inline-block !important; }
         header ul.member-actions .login {
             font-family: 'Cormorant Garamond', Georgia, serif !important;
             font-size: 13px !important;
             letter-spacing: 1.5px !important;
-            text-transform: uppercase !important;
             color: rgba(255,255,255,0.93) !important;
-            white-space: nowrap;
         }
         section.navigation.fixed header ul.member-actions .login { color: #2a1e10 !important; }
         .member-actions .btn-gift {
