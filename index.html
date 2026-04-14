@@ -71,13 +71,70 @@
             text-transform: uppercase;
         }
         #invitation p {
-            font-size: 1.2em;
+            font-size: 1.35em;
+            font-weight: 600;
         }
 
-        /* Logo transparency fix */
+        /* Guest arrival callout */
+        .arrival-callout {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 10px 24px;
+            background: #f9f3ea;
+            border-left: 4px solid #c9a96e;
+            border-radius: 4px;
+            font-size: 1em;
+            font-weight: 600;
+            color: #7a5c2e;
+        }
+
+        /* Schedule section */
+        #schedule { background: #fafafa; }
+        .schedule-col h4 {
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #c9a96e;
+            padding-bottom: 8px;
+            margin-bottom: 18px;
+        }
+        .schedule-item {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 14px;
+            align-items: flex-start;
+        }
+        .schedule-time {
+            min-width: 90px;
+            font-weight: 700;
+            color: #c9a96e;
+            font-size: 0.9em;
+            padding-top: 2px;
+        }
+        .schedule-desc {
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        .schedule-badge {
+            display: inline-block;
+            font-size: 0.7em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-bottom: 4px;
+        }
+        .badge-party { background: #2d5a27; color: #fff; }
+        .badge-guests { background: #c9a96e; color: #fff; }
+        .badge-all { background: #555; color: #fff; }
+
+        /* Logo — white background pill to make it pop over the hero image */
         .hero-content img {
-            mix-blend-mode: multiply;
-            background: transparent;
+            background: rgba(255,255,255,0.82);
+            border-radius: 12px;
+            padding: 18px 28px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.18);
         }
 
         /* Seating chart */
@@ -103,6 +160,7 @@
                     <nav>
                         <ul class="primary-nav">
                             <li><a href="#intro">How we met</a></li>
+                            <li><a href="#schedule">Schedule</a></li>
                             <li><a href="#events">Events</a></li>
                             <li><a href="#eng-pics">Engagement</a></li>
                             <li><a href="#seating">Seating</a></li>
@@ -148,7 +206,126 @@
                 <h3>We are getting married!</h3>
                 <p>Join us Friday, April 17<sup>th</sup>, 2026 for our wedding celebration!</p>
                 <p>Festivities begin Thursday, April 16<sup>th</sup> and wrap up Saturday, April 18<sup>th</sup> — come for some, come for all!</p>
+                <div class="arrival-callout">
+                    Guests — please plan to arrive between 4:30 PM and 5:00 PM. The ceremony begins promptly at 5!
+                </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<section id="schedule" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="header">Wedding Day Schedule</h3>
+                <p>Here's how the weekend flows — broken out for the wedding party and guests.</p>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+
+            <!-- Thursday -->
+            <div class="col-md-12">
+                <h5 style="font-weight:800; margin-bottom: 16px;">Thursday, April 16th</h5>
+            </div>
+            <div class="col-md-6 schedule-col">
+                <h4><span class="schedule-badge badge-party">Wedding Party &amp; Family</span></h4>
+                <div class="schedule-item">
+                    <div class="schedule-time">7:00 PM</div>
+                    <div class="schedule-desc"><strong>Dinner at Moontower Saloon</strong><br>Immediate family and wedding party — let's kick off the weekend right.<br><em>10212 Menchaca Rd, Austin, TX 78748</em></div>
+                </div>
+            </div>
+            <div class="col-md-6 schedule-col">
+                <h4><span class="schedule-badge badge-guests">Guests</span></h4>
+                <div class="schedule-item">
+                    <div class="schedule-time">7:00 PM</div>
+                    <div class="schedule-desc"><strong>Welcome to Austin!</strong><br>Get settled in, explore the city, and rest up — tomorrow is the big day.</div>
+                </div>
+            </div>
+
+            <div class="col-md-12"><hr style="margin: 28px 0;"></div>
+
+            <!-- Friday -->
+            <div class="col-md-12">
+                <h5 style="font-weight:800; margin-bottom: 16px;">Friday, April 17th — The Wedding</h5>
+            </div>
+            <div class="col-md-6 schedule-col">
+                <h4><span class="schedule-badge badge-party">Wedding Party</span></h4>
+                <div class="schedule-item">
+                    <div class="schedule-time">12:00 PM</div>
+                    <div class="schedule-desc"><strong>Venue Setup</strong><br>Join Gabby and Brandon at Ranch Austin to set up and make the space beautiful. Lunch is TBD — there's a food truck lot nearby and we'll figure out the vibes together!<br><em>10313 Circle Dr, Austin, TX 78736</em></div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">2:00 PM</div>
+                    <div class="schedule-desc"><strong>Photos &amp; Pre-Ceremony Getting Ready</strong><br>Bridal party photos and final prep before the big moment.</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">4:30 PM</div>
+                    <div class="schedule-desc"><strong>Guests Begin Arriving</strong><br>Help welcome everyone as they arrive!</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">5:00 PM</div>
+                    <div class="schedule-desc"><strong>Ceremony Begins</strong></div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">5:30 PM</div>
+                    <div class="schedule-desc"><strong>Grazing Table Opens</strong><br>Cocktail hour vibes — mingle, snack, celebrate!</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">6:30 PM</div>
+                    <div class="schedule-desc"><strong>Dinner is Served</strong><br>Lasagna, fettuccine alfredo, and caesar salad. Mangia!</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">7:30 PM</div>
+                    <div class="schedule-desc"><strong>MAXIMUM DANCING</strong><br>The floor is yours. All night.</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">11:00 PM</div>
+                    <div class="schedule-desc"><strong>Wrap Up</strong><br>What a night. We love you all.</div>
+                </div>
+            </div>
+            <div class="col-md-6 schedule-col">
+                <h4><span class="schedule-badge badge-guests">Guests</span></h4>
+                <div class="schedule-item">
+                    <div class="schedule-time">4:30 PM</div>
+                    <div class="schedule-desc"><strong>Arrive at Ranch Austin</strong><br>Please arrive between 4:30 and 5:00 PM so we can get started on time!<br><em>10313 Circle Dr, Austin, TX 78736</em></div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">5:00 PM</div>
+                    <div class="schedule-desc"><strong>Ceremony Begins</strong></div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">5:30 PM</div>
+                    <div class="schedule-desc"><strong>Grazing Table Opens</strong><br>Cocktail hour — snacks, drinks, and good company.</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">6:30 PM</div>
+                    <div class="schedule-desc"><strong>Dinner is Served</strong><br>Lasagna, fettuccine alfredo, and caesar salad.</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">7:30 PM</div>
+                    <div class="schedule-desc"><strong>MAXIMUM DANCING</strong><br>Come ready to move.</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">11:00 PM</div>
+                    <div class="schedule-desc"><strong>Wrap Up</strong><br>Safe travels home — thank you for being here!</div>
+                </div>
+            </div>
+
+            <div class="col-md-12"><hr style="margin: 28px 0;"></div>
+
+            <!-- Saturday -->
+            <div class="col-md-12">
+                <h5 style="font-weight:800; margin-bottom: 16px;">Saturday, April 18th</h5>
+            </div>
+            <div class="col-md-6 col-md-offset-3 schedule-col">
+                <h4><span class="schedule-badge badge-all">Everyone</span></h4>
+                <div class="schedule-item">
+                    <div class="schedule-time">Noon</div>
+                    <div class="schedule-desc"><strong>Post-Nuptials Brunch at Banger's</strong><br>Come decompress, relive the highlights, and enjoy one last meal together.<br><em>Banger's Sausage House &amp; Beer Garden — 79 Rainey St, Austin, TX 78701</em></div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -167,7 +344,7 @@
                     Gabriella was born and raised in Houston, Texas, and Brandon is a St. Louis native — two cities, two roots, one love story.
                     We met when Gabby visited St. Louis, and from the very first night it was clear this was something special. True love has a funny way of showing up when you least expect it, and what started as one unforgettable visit turned into forever.
                     <br><br>
-                    I am so incredibly fortunate that Brandon had the courage and independence to pick up his life and move to Texas on his own. Watching him build a new career, plant new roots, and continuously grow into the best version of himself has been one of the greatest honors of my life. He didn't just move to a new state — he chose us, and I will never stop being grateful for that. 🤍
+                    I am so incredibly fortunate that Brandon had the courage and independence to pick up his life and move to Texas on his own. Watching him build a new career, plant new roots, and continuously grow into the best version of himself has been one of the greatest honors of my life. He didn't just move to a new state — he chose us, and I will never stop being grateful for that.
                 </p>
             </div>
             <div class="col-md-3 hidden-sm hidden-xs"><img src="img/nasabb.jpeg" class="wp2"></div>
@@ -197,7 +374,7 @@
             </div>
             <div class="col-md-4 col-sm-12 col-xs-12">
                 <div class="wp4" style="border: 2px solid #c9a96e; border-radius: 6px; padding: 20px; background: rgba(201,169,110,0.05);">
-                    <p><strong>🎉 Friday, April 17th — THE BIG DAY 🎉</strong></p>
+                    <p><strong>Friday, April 17th — THE BIG DAY</strong></p>
                     <h5>It's a Nice Day for a Brown Wedding <span class="time">5PM – 11PM</span></h5>
                     <p>The moment we've all been waiting for! Gabby &amp; Brandon are getting married! We'll have a super fun, short, and sweet ceremony followed by the reception with our closest family and friends. We cannot wait to see you there to witness our vows and celebrate our love!</p>
                     <p><i class="fa fa-map-marker"></i> <a href="https://maps.google.com/?q=Ranch+Austin+10313+Circle+Dr+Austin+TX+78736" target="_blank">Ranch Austin</a><br>10313 Circle Dr, Austin, TX 78736<br><em>Ceremony &amp; Reception — same location</em></p>
@@ -252,7 +429,7 @@
                         <br><br>
                         <strong>Guests</strong>
                         <br>
-                        If you're not in the bridal party and really want to wear green, there's no stopping you! However, white is... it's on the strange side. Of course we want you to feel beautiful — let's just read the ranch. 😄
+                        If you're not in the bridal party and really want to wear green, there's no stopping you! However, white is... it's on the strange side. Of course we want you to feel beautiful — let's just read the ranch.
                         <br><br>
                         <strong>Note:</strong> The ceremony and reception are <strong>outdoors</strong> on an actual ranch. Comfortable footwear is highly recommended — think block heels, wedges, or flats over stilettos!
                     </p>
@@ -486,7 +663,7 @@
                     </div>
                 </div>
 
-                <p style="margin-top: 20px; font-style: italic;">Your presence is truly the greatest gift. Thank you for celebrating with us! 🏡</p>
+                <p style="margin-top: 20px; font-style: italic;">Your presence is truly the greatest gift. Thank you for celebrating with us!</p>
             </div>
         </div>
     </div>
