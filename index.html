@@ -72,12 +72,12 @@
         a { font-family: 'Cormorant Garamond', Georgia, serif !important; }
         .btn { font-family: 'Cormorant Garamond', Georgia, serif !important; }
 
-        /* Base font size bump — everything reads larger */
-        body { font-size: 18px; }
-        p, li { font-size: 1.1em; line-height: 1.85; }
-        h3 { font-size: 2em; letter-spacing: 1px; }
-        h4 { font-size: 1.6em; }
-        h5 { font-size: 1.3em; }
+        /* Base font size — slightly pulled back from 18px */
+        body { font-size: 15px; }
+        p, li { font-size: 1.05em; line-height: 1.8; }
+        h3 { font-size: 1.7em; letter-spacing: 1px; }
+        h4 { font-size: 1.4em; }
+        h5 { font-size: 1.15em; }
         .time { font-style: italic; font-weight: 400; }
         /* Cache-bust hero background to force updated image */
         .hero { background-image: url("img/eng_pics/engagementriver.png?v=20260206") !important; }
@@ -88,10 +88,13 @@
             font-weight: 900;
             letter-spacing: 2px;
             text-transform: uppercase;
+            margin-bottom: 10px;
         }
         #invitation p {
-            font-size: 1.35em;
+            font-size: 1.2em;
             font-weight: 600;
+            margin-bottom: 4px;
+            line-height: 1.5;
         }
 
         /* Guest arrival callout */
@@ -124,20 +127,22 @@
             margin-bottom: 14px;
             align-items: flex-start;
         }
+        /* Schedule — bigger than rest of page */
+        #schedule h5 { font-size: 1.3em; font-weight: 800; }
         .schedule-time {
             min-width: 90px;
             font-weight: 700;
             color: #c9a96e;
-            font-size: 1em;
+            font-size: 1.1em;
             padding-top: 2px;
         }
         .schedule-desc {
-            font-size: 1.05em;
-            line-height: 1.7;
+            font-size: 1.15em;
+            line-height: 1.75;
         }
         .schedule-badge {
             display: inline-block;
-            font-size: 0.8em;
+            font-size: 0.85em;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -205,18 +210,27 @@
             border-bottom: 1px solid rgba(201,169,110,0.3) !important;
             box-shadow: 0 2px 16px rgba(0,0,0,0.08);
         }
-        /* Nav logo */
-        .logo a img {
-            height: 48px;
+        /* Nav logo — hide to give nav links room */
+        .logo { display: none !important; }
+        /* Ensure header content spans full width */
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
         }
+        .header-nav { flex: 1; }
+        .header-nav nav { display: flex; justify-content: space-between; align-items: center; }
+        .primary-nav { display: flex; flex-wrap: nowrap; gap: 0; margin: 0; padding: 0; }
+        .member-actions { display: flex; align-items: center; gap: 10px; margin: 0; padding: 0; white-space: nowrap; }
         /* Nav links — elegant, not squished */
         .primary-nav li a {
             font-family: 'Cormorant Garamond', Georgia, serif !important;
-            font-size: 1em;
-            letter-spacing: 1.5px;
+            font-size: 0.82em;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
             color: rgba(255,255,255,0.92) !important;
-            padding: 6px 10px;
+            padding: 4px 8px;
             transition: color 0.2s;
             white-space: nowrap;
         }
@@ -232,22 +246,22 @@
         /* Venue link */
         .member-actions .login {
             font-family: 'Cormorant Garamond', Georgia, serif !important;
-            font-size: 1em;
-            letter-spacing: 1.5px;
+            font-size: 0.82em;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
             white-space: nowrap;
         }
         /* Gift G&B button — gold, elegant */
         .member-actions .btn-gift {
             font-family: 'Cormorant Garamond', Georgia, serif !important;
-            font-size: 1em;
-            letter-spacing: 1.5px;
+            font-size: 0.82em;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
             background: transparent;
             border: 1.5px solid #c9a96e;
             color: #c9a96e !important;
             border-radius: 30px;
-            padding: 7px 18px;
+            padding: 6px 14px;
             transition: background 0.2s, color 0.2s;
             white-space: nowrap;
         }
@@ -664,33 +678,33 @@
                 <p>Here are the key spots for the weekend. Click any location to open in Google Maps.</p>
             </div>
         </div>
-        <!-- Primary locations row -->
+        <!-- Primary locations row — slightly smaller -->
         <div class="row" style="margin-top: 20px;">
-            <div class="col-md-4 text-center" style="padding: 15px;">
-                <h5><i class="fa fa-plane"></i>&nbsp; Airport</h5>
-                <p><strong>Austin-Bergstrom International</strong><br>3600 Presidential Blvd, Austin, TX 78719</p>
+            <div class="col-md-4 text-center" style="padding: 12px;">
+                <h5 style="font-size:1em;"><i class="fa fa-plane"></i>&nbsp; Airport</h5>
+                <p style="font-size:0.9em;"><strong>Austin-Bergstrom International</strong><br>3600 Presidential Blvd, Austin, TX 78719</p>
                 <a class="btn btn-fill btn-small" href="https://maps.google.com/?q=Austin+Bergstrom+International+Airport+3600+Presidential+Blvd+Austin+TX+78719" target="_blank"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Directions</a>
             </div>
-            <div class="col-md-4 text-center" style="padding: 15px; border-left: 2px solid #c9a96e; border-right: 2px solid #c9a96e;">
-                <h5><i class="fa fa-heart"></i>&nbsp; The Venue</h5>
-                <p><strong>Ranch Austin</strong><br>10313 Circle Dr, Austin, TX 78736<br><em>Ceremony &amp; Reception</em></p>
+            <div class="col-md-4 text-center" style="padding: 12px; border-left: 2px solid #c9a96e; border-right: 2px solid #c9a96e;">
+                <h5 style="font-size:1em;"><i class="fa fa-heart"></i>&nbsp; The Venue</h5>
+                <p style="font-size:0.9em;"><strong>Ranch Austin</strong><br>10313 Circle Dr, Austin, TX 78736<br><em>Ceremony &amp; Reception</em></p>
                 <a class="btn btn-accent btn-small" href="https://maps.google.com/?q=Ranch+Austin+10313+Circle+Dr+Austin+TX+78736" target="_blank"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Directions</a>
             </div>
-            <div class="col-md-4 text-center" style="padding: 15px;">
-                <h5><i class="fa fa-music"></i>&nbsp; Downtown Austin</h5>
-                <p><strong>6th Street &amp; Rainey Street</strong><br>Austin, TX 78701<br><em>Where the fun happens</em></p>
+            <div class="col-md-4 text-center" style="padding: 12px;">
+                <h5 style="font-size:1em;"><i class="fa fa-music"></i>&nbsp; Downtown Austin</h5>
+                <p style="font-size:0.9em;"><strong>6th Street &amp; Rainey Street</strong><br>Austin, TX 78701<br><em>Where the fun happens</em></p>
                 <a class="btn btn-fill btn-small" href="https://maps.google.com/?q=Rainey+Street+Austin+TX+78701" target="_blank"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Explore</a>
             </div>
         </div>
-        <!-- Secondary locations row -->
-        <div class="row" style="margin-top: 6px; margin-bottom: 20px;">
-            <div class="col-md-4 col-md-offset-2 text-center" style="padding: 10px;">
-                <p style="font-size:0.85em; margin-bottom:6px;"><i class="fa fa-map-marker" style="color:#c9a96e;"></i>&nbsp; <strong>Moontower Saloon</strong><br>10212 Menchaca Rd, Austin, TX 78748<br><em>Thursday dinner</em></p>
-                <a class="btn btn-fill btn-small" style="font-size:0.8em;" href="https://maps.google.com/?q=Moontower+Saloon+10212+Menchaca+Rd+Austin+TX+78748" target="_blank"><i class="fa fa-map-marker"></i>&nbsp;Directions</a>
+        <!-- Secondary locations row — slightly bigger -->
+        <div class="row" style="margin-top: 10px; margin-bottom: 20px;">
+            <div class="col-md-4 col-md-offset-2 text-center" style="padding: 12px;">
+                <p style="font-size:1em; margin-bottom:6px;"><i class="fa fa-map-marker" style="color:#c9a96e;"></i>&nbsp; <strong>Moontower Saloon</strong><br>10212 Menchaca Rd, Austin, TX 78748<br><em>Thursday dinner</em></p>
+                <a class="btn btn-fill btn-small" href="https://maps.google.com/?q=Moontower+Saloon+10212+Menchaca+Rd+Austin+TX+78748" target="_blank"><i class="fa fa-map-marker"></i>&nbsp;Directions</a>
             </div>
-            <div class="col-md-4 text-center" style="padding: 10px;">
-                <p style="font-size:0.85em; margin-bottom:6px;"><i class="fa fa-map-marker" style="color:#c9a96e;"></i>&nbsp; <strong>Banger's Sausage House &amp; Beer Garden</strong><br>79 Rainey St, Austin, TX 78701<br><em>Saturday brunch</em></p>
-                <a class="btn btn-fill btn-small" style="font-size:0.8em;" href="https://maps.google.com/?q=Bangers+Sausage+House+79+Rainey+St+Austin+TX+78701" target="_blank"><i class="fa fa-map-marker"></i>&nbsp;Directions</a>
+            <div class="col-md-4 text-center" style="padding: 12px;">
+                <p style="font-size:1em; margin-bottom:6px;"><i class="fa fa-map-marker" style="color:#c9a96e;"></i>&nbsp; <strong>Banger's Sausage House &amp; Beer Garden</strong><br>79 Rainey St, Austin, TX 78701<br><em>Saturday brunch</em></p>
+                <a class="btn btn-fill btn-small" href="https://maps.google.com/?q=Bangers+Sausage+House+79+Rainey+St+Austin+TX+78701" target="_blank"><i class="fa fa-map-marker"></i>&nbsp;Directions</a>
             </div>
         </div>
         <!-- Embedded map -->
@@ -731,68 +745,69 @@
 <section class="rsvp text-center" id="gift">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-10 col-md-offset-1">
                 <h3>No registry, just love (and a house fund!)</h3>
                 <p>We've been lucky enough to travel and have most of what we need. We're saving up for our first home together, so if you'd like to give a gift, a contribution via Venmo or Zelle means the world to us!</p>
+
                 <!-- Gabby -->
                 <div style="margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(201,169,110,0.3);">
-                    <h3 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:2.2em; font-weight:600; letter-spacing:3px; color:#3a2e22; margin-bottom:4px;">Gabriella</h3>
-                    <p style="font-style:italic; color:#9a7a50; margin-top:0; font-size:1em; letter-spacing:1px;">Venmo &amp; Zelle</p>
+                    <h3 style="font-size:1.6em; font-weight:600; letter-spacing:3px; color:#3a2e22; margin-bottom:2px;">Gabriella</h3>
+                    <p style="font-style:italic; color:#9a7a50; margin-top:0; font-size:1.2em; font-weight:600; letter-spacing:1px;">Venmo &amp; Zelle</p>
                 </div>
                 <div class="row" style="margin-top: 10px;">
-                    <div class="col-md-6" style="padding: 10px;">
+                    <div class="col-md-5 col-md-offset-1" style="padding: 10px;">
                         <a class="btn btn-fill btn-large" href="https://venmo.com/u/gabbzwillis" target="_blank">
                             <i class="fa fa-dollar"></i>&nbsp;&nbsp;Venmo
                         </a>
                         <p style="margin-top: 8px;"><strong>@gabbzwillis</strong></p>
-                        <div style="margin-top: 10px; display: inline-block; padding: 8px; background: #fff; border: 1px solid #ddd; border-radius: 4px;">
-                            <img src="img/gabriella_venmo.png" alt="Gabby Venmo QR" style="width:120px; height:120px; display:block; margin: 0 auto;">
+                        <div style="margin-top: 10px; display: inline-block; padding: 10px; background: #fff; border: 1px solid #ddd; border-radius: 4px;">
+                            <img src="img/gabriella_venmo.png" alt="Gabby Venmo QR" style="width:160px; height:160px; display:block; margin: 0 auto;">
                         </div>
                     </div>
-                    <div class="col-md-6" style="padding: 10px;">
+                    <div class="col-md-5" style="padding: 10px;">
                         <a class="btn btn-accent btn-large" href="https://www.zellepay.com/" target="_blank">
                             <i class="fa fa-dollar"></i>&nbsp;&nbsp;Zelle
                         </a>
                         <p style="margin-top: 8px;"><strong>281-451-4631</strong></p>
-                        <div style="margin-top: 10px; display: inline-block; padding: 8px; background: #fff; border: 1px solid #ddd; border-radius: 4px;">
-                            <img src="img/gabriella_zelle.jpeg" alt="Gabby Zelle QR" style="width:120px; height:120px; display:block; margin: 0 auto;">
+                        <div style="margin-top: 10px; display: inline-block; padding: 10px; background: #fff; border: 1px solid #ddd; border-radius: 4px;">
+                            <img src="img/gabriella_zelle.jpeg" alt="Gabby Zelle QR" style="width:160px; height:160px; display:block; margin: 0 auto;">
                         </div>
                     </div>
                 </div>
 
                 <!-- Brandon -->
                 <div style="margin-top: 44px; padding-top: 28px; border-top: 2px solid rgba(201,169,110,0.5);">
-                    <h3 style="font-family:'Cormorant Garamond',Georgia,serif; font-size:2.2em; font-weight:600; letter-spacing:3px; color:#3a2e22; margin-bottom:4px;">Brandon</h3>
-                    <p style="font-style:italic; color:#9a7a50; margin-top:0; font-size:1em; letter-spacing:1px;">Venmo &amp; Zelle</p>
+                    <h3 style="font-size:1.6em; font-weight:600; letter-spacing:3px; color:#3a2e22; margin-bottom:2px;">Brandon</h3>
+                    <p style="font-style:italic; color:#9a7a50; margin-top:0; font-size:1.2em; font-weight:600; letter-spacing:1px;">Venmo &amp; Zelle</p>
                 </div>
                 <div class="row" style="margin-top: 10px;">
-                    <div class="col-md-6" style="padding: 10px;">
+                    <div class="col-md-5 col-md-offset-1" style="padding: 10px;">
                         <a class="btn btn-fill btn-large" href="https://venmo.com/u/Brandon-Brown-220" target="_blank">
                             <i class="fa fa-dollar"></i>&nbsp;&nbsp;Venmo
                         </a>
                         <p style="margin-top: 8px;"><strong>@Brandon-Brown-220</strong></p>
-                        <div style="margin-top: 10px; display: inline-block; padding: 8px; background: #fff; border: 1px solid #ddd; border-radius: 4px;">
-                            <p style="margin: 0; font-size: 12px; color: #999; font-style: italic;">[Brandon's Venmo QR code here]</p>
-                            <div style="width: 120px; height: 120px; background: #f5f5f5; margin: 6px auto; display: flex; align-items: center; justify-content: center;">
-                                <i class="fa fa-qrcode" style="font-size: 48px; color: #ccc;"></i>
+                        <div style="margin-top: 10px; display: inline-block; padding: 10px; background: #fff; border: 1px solid #ddd; border-radius: 4px;">
+                            <p style="margin: 0; font-size: 0.85em; color: #999; font-style: italic;">[Brandon's Venmo QR — coming soon]</p>
+                            <div style="width: 160px; height: 160px; background: #f5f5f5; margin: 6px auto; display: flex; align-items: center; justify-content: center;">
+                                <i class="fa fa-qrcode" style="font-size: 56px; color: #ccc;"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6" style="padding: 10px;">
+                    <div class="col-md-5" style="padding: 10px;">
                         <a class="btn btn-accent btn-large" href="https://www.zellepay.com/" target="_blank">
                             <i class="fa fa-dollar"></i>&nbsp;&nbsp;Zelle
                         </a>
                         <p style="margin-top: 8px;"><strong>314-397-8602</strong></p>
-                        <div style="margin-top: 10px; display: inline-block; padding: 8px; background: #fff; border: 1px solid #ddd; border-radius: 4px;">
-                            <p style="margin: 0; font-size: 12px; color: #999; font-style: italic;">[Brandon's Zelle QR code here]</p>
-                            <div style="width: 120px; height: 120px; background: #f5f5f5; margin: 6px auto; display: flex; align-items: center; justify-content: center;">
-                                <i class="fa fa-qrcode" style="font-size: 48px; color: #ccc;"></i>
+                        <div style="margin-top: 10px; display: inline-block; padding: 10px; background: #fff; border: 1px solid #ddd; border-radius: 4px;">
+                            <p style="margin: 0; font-size: 0.85em; color: #999; font-style: italic;">[Brandon's Zelle QR — coming soon]</p>
+                            <div style="width: 160px; height: 160px; background: #f5f5f5; margin: 6px auto; display: flex; align-items: center; justify-content: center;">
+                                <i class="fa fa-qrcode" style="font-size: 56px; color: #ccc;"></i>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <p style="margin-top: 20px; font-style: italic;">Your presence is truly the greatest gift. Thank you for celebrating with us!</p>
+                <p style="margin-top: 28px; font-style: italic;">Your presence is truly the greatest gift. Thank you for celebrating with us!</p>
             </div>
         </div>
     </div>
