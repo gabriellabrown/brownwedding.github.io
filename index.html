@@ -63,12 +63,21 @@
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <style>
         /* ── Global font ── */
-        body, p, li, td, input, button, select, textarea, .btn,
-        h1, h2, h3, h4, h5, h6, a, span, div {
+        body, p, li, td, input, button, select, textarea,
+        h1, h2, h3, h4, h5, h6 {
             font-family: 'Cormorant Garamond', Georgia, serif !important;
         }
-        p, li { font-size: 1.08em; line-height: 1.8; }
-        h3.header, h3 { letter-spacing: 1px; }
+        /* Anchor and non-icon spans inherit naturally, but don't force on all divs/spans
+           so Font Awesome icons keep their icon font */
+        a { font-family: 'Cormorant Garamond', Georgia, serif !important; }
+        .btn { font-family: 'Cormorant Garamond', Georgia, serif !important; }
+
+        /* Base font size bump — everything reads larger */
+        body { font-size: 18px; }
+        p, li { font-size: 1.1em; line-height: 1.85; }
+        h3 { font-size: 2em; letter-spacing: 1px; }
+        h4 { font-size: 1.6em; }
+        h5 { font-size: 1.3em; }
         .time { font-style: italic; font-weight: 400; }
         /* Cache-bust hero background to force updated image */
         .hero { background-image: url("img/eng_pics/engagementriver.png?v=20260206") !important; }
@@ -87,15 +96,16 @@
 
         /* Guest arrival callout */
         .arrival-callout {
-            display: inline-block;
-            margin-top: 14px;
-            padding: 10px 24px;
+            display: block;
+            margin-top: 20px;
+            padding: 18px 32px;
             background: #f9f3ea;
-            border-left: 4px solid #c9a96e;
+            border-left: 5px solid #c9a96e;
             border-radius: 4px;
-            font-size: 1em;
+            font-size: 1.4em;
             font-weight: 600;
             color: #7a5c2e;
+            line-height: 1.6;
         }
 
         /* Schedule section */
@@ -118,22 +128,22 @@
             min-width: 90px;
             font-weight: 700;
             color: #c9a96e;
-            font-size: 0.9em;
+            font-size: 1em;
             padding-top: 2px;
         }
         .schedule-desc {
-            font-size: 0.95em;
-            line-height: 1.5;
+            font-size: 1.05em;
+            line-height: 1.7;
         }
         .schedule-badge {
             display: inline-block;
-            font-size: 0.7em;
+            font-size: 0.8em;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            padding: 2px 8px;
+            padding: 3px 10px;
             border-radius: 20px;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
         .badge-party { background: #2d5a27; color: #fff; }
         .badge-guests { background: #c9a96e; color: #fff; }
@@ -199,44 +209,47 @@
         .logo a img {
             height: 48px;
         }
-        /* Nav links — bigger, spaced, elegant */
+        /* Nav links — elegant, not squished */
         .primary-nav li a {
-            font-family: Georgia, 'Times New Roman', serif;
-            font-size: 0.95em;
-            letter-spacing: 2px;
+            font-family: 'Cormorant Garamond', Georgia, serif !important;
+            font-size: 1em;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             color: rgba(255,255,255,0.92) !important;
-            padding: 6px 14px;
+            padding: 6px 10px;
             transition: color 0.2s;
+            white-space: nowrap;
         }
         .primary-nav li a:hover {
             color: #c9a96e !important;
         }
         section.navigation.fixed .primary-nav li a {
-            color: #333 !important;
+            color: #3a2e22 !important;
         }
         section.navigation.fixed .primary-nav li a:hover {
             color: #c9a96e !important;
         }
         /* Venue link */
         .member-actions .login {
-            font-family: Georgia, 'Times New Roman', serif;
-            font-size: 0.9em;
-            letter-spacing: 2px;
+            font-family: 'Cormorant Garamond', Georgia, serif !important;
+            font-size: 1em;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
+            white-space: nowrap;
         }
         /* Gift G&B button — gold, elegant */
         .member-actions .btn-gift {
-            font-family: Georgia, 'Times New Roman', serif;
-            font-size: 0.85em;
-            letter-spacing: 2px;
+            font-family: 'Cormorant Garamond', Georgia, serif !important;
+            font-size: 1em;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             background: transparent;
             border: 1.5px solid #c9a96e;
             color: #c9a96e !important;
             border-radius: 30px;
-            padding: 7px 20px;
+            padding: 7px 18px;
             transition: background 0.2s, color 0.2s;
+            white-space: nowrap;
         }
         .member-actions .btn-gift:hover {
             background: #c9a96e;
@@ -790,7 +803,7 @@
         <div class="row">
             <div class="col-sm-12 text-center content">
                 <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
-                <p>Crafted by Gabbz with lots of <span class="fa fa-heart pulse2"></span> for my sweet BB</p>
+                <p>Crafted by Gabbz with lots of <span style="color:#c9a96e; font-size:1.1em;">&#9829;</span> for my sweet BB</p>
             </div>
         </div>
     </div>
