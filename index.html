@@ -219,7 +219,54 @@
             font-family: 'Cormorant Garamond', Georgia, serif !important;
         }
 
-        /* Tighten section padding globally */
+        /* Seating table blurbs */
+        .table-blurbs { display: flex; flex-direction: column; gap: 8px; }
+        .table-blurb {
+            border: 1px solid rgba(201,169,110,0.35);
+            border-radius: 6px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+        .table-blurb-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 18px;
+            cursor: pointer;
+            background: #fdf8f0;
+            transition: background 0.2s;
+            user-select: none;
+        }
+        .table-blurb-header:hover { background: #f5ede0; }
+        .table-num {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.1em;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #3a2e22;
+        }
+        .table-chevron {
+            color: #c9a96e;
+            font-size: 0.85em;
+            transition: transform 0.25s;
+        }
+        .table-blurb-header.open .table-chevron { transform: rotate(180deg); }
+        .table-blurb-body {
+            display: none;
+            padding: 12px 18px 14px;
+            border-top: 1px solid rgba(201,169,110,0.2);
+        }
+        .table-blurb-body p {
+            margin: 0;
+            font-size: 1em;
+            color: #2a2218;
+            line-height: 1.7;
+        }
+        @media (max-width: 991px) {
+            .table-blurbs { margin-top: 24px; }
+        }
         .section-padding { padding: 28px 0 !important; }
         #seating.section-padding { padding: 20px 0 10px !important; }
         .rsvp.section-padding, #gift { padding: 20px 0 !important; }
@@ -595,15 +642,123 @@
                 <p>Here's a rough guide to where everyone will be — feel free to move around and mingle!</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1 text-center">
-                <img src="img/wedding seat setup.png" alt="Ranch Austin Indoor Seating Layout" style="max-width:100%; border:1px solid #ddd; border-radius:4px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"
+        <div class="row" style="margin-top: 20px;">
+            <!-- Floor plan -->
+            <div class="col-md-7">
+                <img src="img/wedding seat setup.png" alt="Ranch Austin Indoor Seating Layout"
+                     style="max-width:100%; border:1px solid #ddd; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"
                      onerror="this.style.display='none'; document.getElementById('seating-placeholder').style.display='block';">
-                <div id="seating-placeholder" style="display:none; padding: 40px; background: #f9f9f9; border: 2px dashed #ddd; border-radius: 6px;">
+                <div id="seating-placeholder" style="display:none; padding: 40px; background: #f9f9f9; border: 2px dashed #ddd; border-radius: 6px; text-align:center;">
                     <i class="fa fa-map" style="font-size: 48px; color: #ccc;"></i>
                     <p style="margin-top: 15px; color: #aaa;">Seating chart coming soon!</p>
                 </div>
-                <p class="seating-caption" style="margin-top: 12px;">Ranch Austin Building Layout — April 17, 2026 &nbsp;|&nbsp; <em>Seats are approximate — come find us!</em></p>
+                <p class="seating-caption" style="margin-top: 10px; text-align:center;">Ranch Austin — April 17, 2026 &nbsp;|&nbsp; <em>Seats are approximate — come find us!</em></p>
+            </div>
+            <!-- Table blurbs -->
+            <div class="col-md-5">
+                <div class="table-blurbs">
+
+                    <div class="table-blurb">
+                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                            <span class="table-num">Table 1</span>
+                            <i class="fa fa-chevron-down table-chevron"></i>
+                        </div>
+                        <div class="table-blurb-body">
+                            <p>[Add guest names here]</p>
+                        </div>
+                    </div>
+
+                    <div class="table-blurb">
+                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                            <span class="table-num">Table 2</span>
+                            <i class="fa fa-chevron-down table-chevron"></i>
+                        </div>
+                        <div class="table-blurb-body">
+                            <p>[Add guest names here]</p>
+                        </div>
+                    </div>
+
+                    <div class="table-blurb">
+                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                            <span class="table-num">Table 3</span>
+                            <i class="fa fa-chevron-down table-chevron"></i>
+                        </div>
+                        <div class="table-blurb-body">
+                            <p>[Add guest names here]</p>
+                        </div>
+                    </div>
+
+                    <div class="table-blurb">
+                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                            <span class="table-num">Table 4</span>
+                            <i class="fa fa-chevron-down table-chevron"></i>
+                        </div>
+                        <div class="table-blurb-body">
+                            <p>[Add guest names here]</p>
+                        </div>
+                    </div>
+
+                    <div class="table-blurb">
+                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                            <span class="table-num">Table 5</span>
+                            <i class="fa fa-chevron-down table-chevron"></i>
+                        </div>
+                        <div class="table-blurb-body">
+                            <p>[Add guest names here]</p>
+                        </div>
+                    </div>
+
+                    <div class="table-blurb">
+                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                            <span class="table-num">Table 6</span>
+                            <i class="fa fa-chevron-down table-chevron"></i>
+                        </div>
+                        <div class="table-blurb-body">
+                            <p>[Add guest names here]</p>
+                        </div>
+                    </div>
+
+                    <div class="table-blurb">
+                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                            <span class="table-num">Table 7</span>
+                            <i class="fa fa-chevron-down table-chevron"></i>
+                        </div>
+                        <div class="table-blurb-body">
+                            <p>[Add guest names here]</p>
+                        </div>
+                    </div>
+
+                    <div class="table-blurb">
+                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                            <span class="table-num">Table 8</span>
+                            <i class="fa fa-chevron-down table-chevron"></i>
+                        </div>
+                        <div class="table-blurb-body">
+                            <p>[Add guest names here]</p>
+                        </div>
+                    </div>
+
+                    <div class="table-blurb">
+                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                            <span class="table-num">Table 9</span>
+                            <i class="fa fa-chevron-down table-chevron"></i>
+                        </div>
+                        <div class="table-blurb-body">
+                            <p>[Add guest names here]</p>
+                        </div>
+                    </div>
+
+                    <div class="table-blurb">
+                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                            <span class="table-num">Table 10</span>
+                            <i class="fa fa-chevron-down table-chevron"></i>
+                        </div>
+                        <div class="table-blurb-body">
+                            <p>[Add guest names here]</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
@@ -871,6 +1026,15 @@
 <script src="js/scripts.min.js"></script>
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
+<!-- Table blurb toggle -->
+<script>
+    function toggleTable(header) {
+        var body = header.nextElementSibling;
+        var isOpen = header.classList.contains('open');
+        header.classList.toggle('open', !isOpen);
+        body.style.display = isOpen ? 'none' : 'block';
+    }
+</script>
 <!-- Google Analytics -->
 <script>
     (function (i, s, o, g, r, a, m) {
