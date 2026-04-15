@@ -83,6 +83,9 @@
         .hero { background-image: url("img/eng_pics/engagementriver.png?v=20260206") !important; }
 
         /* Invitation section */
+        #invitation {
+            padding: 30px 16px !important;
+        }
         #invitation h3 {
             font-size: 3em;
             font-weight: 900;
@@ -101,7 +104,7 @@
         .arrival-callout {
             display: block;
             margin-top: 20px;
-            padding: 18px 32px;
+            padding: 16px 24px;
             background: #f9f3ea;
             border-left: 5px solid #c9a96e;
             border-radius: 4px;
@@ -109,6 +112,42 @@
             font-weight: 600;
             color: #7a5c2e;
             line-height: 1.6;
+            text-align: left;
+        }
+
+        /* Mobile fixes */
+        @media (max-width: 767px) {
+            #invitation h3 {
+                font-size: 1.8em;
+                letter-spacing: 1px;
+            }
+            #invitation p {
+                font-size: 1em;
+                padding: 0 8px;
+            }
+            .arrival-callout {
+                font-size: 1.05em;
+                padding: 14px 16px;
+                text-align: left;
+            }
+            .hero-content .gb-logo-text {
+                font-size: 2.4em;
+                letter-spacing: 2px;
+            }
+            .hero-content .gb-logo-text .subtitle {
+                font-size: 0.38em;
+                letter-spacing: 3px;
+            }
+            .schedule-item {
+                flex-direction: column;
+                gap: 4px;
+            }
+            .schedule-time {
+                min-width: unset;
+            }
+            #gift .col-md-5 {
+                margin-bottom: 20px;
+            }
         }
 
         /* Schedule — bigger, darker */
