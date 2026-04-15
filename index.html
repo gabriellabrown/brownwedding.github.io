@@ -84,70 +84,115 @@
 
         /* Invitation section */
         #invitation {
-            padding: 30px 16px !important;
+            padding: 36px 0 28px !important;
+        }
+        #invitation .col-md-12 {
+            padding-left: 20px;
+            padding-right: 20px;
         }
         #invitation h3 {
-            font-size: 3em;
+            font-size: 2.8em;
             font-weight: 900;
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
+            line-height: 1.1;
         }
         #invitation p {
             font-size: 1.15em;
             font-weight: 600;
-            margin-bottom: 2px;
-            line-height: 1.4;
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+            line-height: 1.45;
+        }
+        #invitation p + p {
+            margin-top: 2px;
         }
 
         /* Guest arrival callout */
         .arrival-callout {
             display: block;
-            margin-top: 20px;
-            padding: 16px 24px;
+            margin: 18px auto 0;
+            max-width: 680px;
+            padding: 14px 24px;
             background: #f9f3ea;
             border-left: 5px solid #c9a96e;
             border-radius: 4px;
-            font-size: 1.4em;
+            font-size: 1.25em;
             font-weight: 600;
             color: #7a5c2e;
-            line-height: 1.6;
+            line-height: 1.55;
             text-align: left;
         }
 
         /* Mobile fixes */
         @media (max-width: 767px) {
+            /* Invitation */
+            #invitation {
+                padding: 24px 0 20px !important;
+            }
             #invitation h3 {
-                font-size: 1.8em;
-                letter-spacing: 1px;
+                font-size: 1.6em;
+                letter-spacing: 0.5px;
+                word-break: break-word;
             }
             #invitation p {
-                font-size: 1em;
-                padding: 0 8px;
+                font-size: 0.95em;
+                padding: 0 4px;
             }
             .arrival-callout {
-                font-size: 1.05em;
-                padding: 14px 16px;
-                text-align: left;
+                font-size: 0.95em;
+                padding: 12px 14px;
+                margin-top: 14px;
             }
+
+            /* Hero */
             .hero-content .gb-logo-text {
-                font-size: 2.4em;
-                letter-spacing: 2px;
+                font-size: 2em;
+                letter-spacing: 1.5px;
             }
             .hero-content .gb-logo-text .subtitle {
-                font-size: 0.38em;
-                letter-spacing: 3px;
+                font-size: 0.36em;
+                letter-spacing: 2px;
             }
+
+            /* Schedule */
             .schedule-item {
                 flex-direction: column;
-                gap: 4px;
+                gap: 2px;
             }
             .schedule-time {
                 min-width: unset;
             }
-            #gift .col-md-5 {
-                margin-bottom: 20px;
+            .schedule-desc { font-size: 1em; }
+
+            /* Events — stack panels */
+            .events-friday { margin: 16px 0; }
+
+            /* Gift */
+            #gift .col-md-5 { margin-bottom: 20px; }
+
+            /* Seating — stack image above blurbs */
+            #seating .col-md-7,
+            #seating .col-md-5 {
+                width: 100%;
+                float: none;
             }
+            .table-blurbs { margin-top: 20px; }
+
+            /* Map — stack location cards */
+            #map .col-md-4 {
+                border-left: none !important;
+                border-right: none !important;
+                border-bottom: 1px solid rgba(201,169,110,0.25);
+                padding-bottom: 12px;
+                margin-bottom: 8px;
+            }
+
+            /* General text breathing room */
+            .section-padding { padding: 20px 0 !important; }
+            h3 { font-size: 1.5em !important; }
+            h5 { font-size: 1.05em !important; }
         }
 
         /* Schedule — bigger, darker */
