@@ -309,8 +309,17 @@
             color: #2a2218;
             line-height: 1.7;
         }
-        @media (max-width: 991px) {
-            .table-blurbs { margin-top: 24px; }
+        .table-blurb-body ul {
+            margin: 0;
+            padding: 0 0 0 18px;
+            list-style: disc;
+        }
+        .table-blurb-body ul li {
+            font-size: 1em;
+            color: #2a2218;
+            line-height: 1.7;
+            padding-bottom: 0 !important;
+            margin-bottom: 0;
         }
         .section-padding { padding: 28px 0 !important; }
         #seating.section-padding { padding: 20px 0 10px !important; }
@@ -704,101 +713,101 @@
                 <div class="table-blurbs">
 
                     <div class="table-blurb">
-                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                        <div class="table-blurb-header open" onclick="toggleTable(this)">
                             <span class="table-num">Table 1</span>
-                            <i class="fa fa-chevron-down table-chevron"></i>
+                            <i class="fa fa-chevron-down table-chevron" style="transform:rotate(180deg)"></i>
                         </div>
-                        <div class="table-blurb-body">
-                            <p>Mom Nancy, Dad Robert, Mama Chacha, Uncle Joe, Joseph, Ashleigh, Clover, John, Anna</p>
+                        <div class="table-blurb-body" style="display:block;">
+                            <ul><li>Mom Nancy</li><li>Dad Robert</li><li>Mama Chacha</li><li>Uncle Joe</li><li>Joseph</li><li>Ashleigh</li><li>Clover</li><li>John</li><li>Anna</li></ul>
                         </div>
                     </div>
 
                     <div class="table-blurb">
-                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                        <div class="table-blurb-header open" onclick="toggleTable(this)">
                             <span class="table-num">Table 2</span>
-                            <i class="fa fa-chevron-down table-chevron"></i>
+                            <i class="fa fa-chevron-down table-chevron" style="transform:rotate(180deg)"></i>
                         </div>
-                        <div class="table-blurb-body">
-                            <p>Greg, MJ, Mason B., Granny B, Uncle Keith, Pam, John, Mike, Chichi</p>
+                        <div class="table-blurb-body" style="display:block;">
+                            <ul><li>Greg</li><li>MJ</li><li>Mason B.</li><li>Granny B</li><li>Uncle Keith</li><li>Pam</li><li>John</li><li>Mike</li><li>Chichi</li></ul>
                         </div>
                     </div>
 
                     <div class="table-blurb">
-                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                        <div class="table-blurb-header open" onclick="toggleTable(this)">
                             <span class="table-num">Table 3</span>
-                            <i class="fa fa-chevron-down table-chevron"></i>
+                            <i class="fa fa-chevron-down table-chevron" style="transform:rotate(180deg)"></i>
                         </div>
-                        <div class="table-blurb-body">
-                            <p>Vero, Kerry, Noah, Lindsey, Alex, Jordan, Tio Juan, Tia Norma</p>
+                        <div class="table-blurb-body" style="display:block;">
+                            <ul><li>Vero</li><li>Kerry</li><li>Noah</li><li>Lindsey</li><li>Alex</li><li>Jordan</li><li>Tio Juan</li><li>Tia Norma</li></ul>
                         </div>
                     </div>
 
                     <div class="table-blurb">
-                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                        <div class="table-blurb-header open" onclick="toggleTable(this)">
                             <span class="table-num">Table 4</span>
-                            <i class="fa fa-chevron-down table-chevron"></i>
+                            <i class="fa fa-chevron-down table-chevron" style="transform:rotate(180deg)"></i>
                         </div>
-                        <div class="table-blurb-body">
-                            <p>Tia Estelita, Frank, Niko, Tia Alma <em>(birthday woman!)</em>, Tino, Amy, Breanna, Keegan</p>
+                        <div class="table-blurb-body" style="display:block;">
+                            <ul><li>Tia Estelita</li><li>Frank</li><li>Niko</li><li>Tia Alma <em>(birthday woman!)</em></li><li>Tino</li><li>Amy</li><li>Breanna</li><li>Keegan</li></ul>
                         </div>
                     </div>
 
                     <div class="table-blurb">
-                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                        <div class="table-blurb-header open" onclick="toggleTable(this)">
                             <span class="table-num">Table 5</span>
-                            <i class="fa fa-chevron-down table-chevron"></i>
+                            <i class="fa fa-chevron-down table-chevron" style="transform:rotate(180deg)"></i>
                         </div>
-                        <div class="table-blurb-body">
-                            <p>Jenni, Uncle Gary, Tia Susie, Uncle Mike, Uncle Darryl, Cousin Tina, Tata Charles, Uncle Alan</p>
+                        <div class="table-blurb-body" style="display:block;">
+                            <ul><li>Jenni</li><li>Uncle Gary</li><li>Tia Susie</li><li>Uncle Mike</li><li>Uncle Darryl</li><li>Cousin Tina</li><li>Tata Charles</li><li>Uncle Alan</li></ul>
                         </div>
                     </div>
 
                     <div class="table-blurb">
-                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                        <div class="table-blurb-header open" onclick="toggleTable(this)">
                             <span class="table-num">Table 6</span>
-                            <i class="fa fa-chevron-down table-chevron"></i>
+                            <i class="fa fa-chevron-down table-chevron" style="transform:rotate(180deg)"></i>
                         </div>
-                        <div class="table-blurb-body">
-                            <p>JT, Patricia, Chris, Coby, Laura, Felipe, Kim, Kam, Diana, Adam</p>
+                        <div class="table-blurb-body" style="display:block;">
+                            <ul><li>JT</li><li>Patricia</li><li>Chris</li><li>Coby</li><li>Laura</li><li>Felipe</li><li>Kim</li><li>Kam</li><li>Diana</li><li>Adam</li></ul>
                         </div>
                     </div>
 
                     <div class="table-blurb">
-                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                        <div class="table-blurb-header open" onclick="toggleTable(this)">
                             <span class="table-num">Table 7</span>
-                            <i class="fa fa-chevron-down table-chevron"></i>
+                            <i class="fa fa-chevron-down table-chevron" style="transform:rotate(180deg)"></i>
                         </div>
-                        <div class="table-blurb-body">
-                            <p>Wilbur, Shane, Spiros, Sean, Meg, Bailey, Ryan, Bella</p>
+                        <div class="table-blurb-body" style="display:block;">
+                            <ul><li>Wilbur</li><li>Shane</li><li>Spiros</li><li>Sean</li><li>Meg</li><li>Bailey</li><li>Ryan</li><li>Bella</li></ul>
                         </div>
                     </div>
 
                     <div class="table-blurb">
-                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                        <div class="table-blurb-header open" onclick="toggleTable(this)">
                             <span class="table-num">Table 8</span>
-                            <i class="fa fa-chevron-down table-chevron"></i>
+                            <i class="fa fa-chevron-down table-chevron" style="transform:rotate(180deg)"></i>
                         </div>
-                        <div class="table-blurb-body">
-                            <p>Melaney, Eddie, Mama Randy, Britt, Ryan, Brianna, Ben, Alaia</p>
+                        <div class="table-blurb-body" style="display:block;">
+                            <ul><li>Melaney</li><li>Eddie</li><li>Mama Randy</li><li>Britt</li><li>Ryan</li><li>Brianna</li><li>Ben</li><li>Alaia</li></ul>
                         </div>
                     </div>
 
                     <div class="table-blurb">
-                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                        <div class="table-blurb-header open" onclick="toggleTable(this)">
                             <span class="table-num">Table 9</span>
-                            <i class="fa fa-chevron-down table-chevron"></i>
+                            <i class="fa fa-chevron-down table-chevron" style="transform:rotate(180deg)"></i>
                         </div>
-                        <div class="table-blurb-body">
-                            <p>[Add guest names here]</p>
+                        <div class="table-blurb-body" style="display:block;">
+                            <ul><li>Mark</li><li>Sylvia</li><li>Laura</li><li>Nick</li><li>Donna</li><li>Jacob</li><li>Sandra</li><li>Mark</li></ul>
                         </div>
                     </div>
 
                     <div class="table-blurb">
-                        <div class="table-blurb-header" onclick="toggleTable(this)">
+                        <div class="table-blurb-header open" onclick="toggleTable(this)">
                             <span class="table-num">Table 10</span>
-                            <i class="fa fa-chevron-down table-chevron"></i>
+                            <i class="fa fa-chevron-down table-chevron" style="transform:rotate(180deg)"></i>
                         </div>
-                        <div class="table-blurb-body">
+                        <div class="table-blurb-body" style="display:block;">
                             <p>[Add guest names here]</p>
                         </div>
                     </div>
